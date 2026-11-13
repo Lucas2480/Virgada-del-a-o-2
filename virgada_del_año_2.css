@@ -36,8 +36,8 @@ h1{
 
 @keyframes movimiento{
 
-    from{translate: 0 1%;}
-    to{translate: 0 -1%;}
+    from{translate: 0 3%;}
+    to{translate: 0 -3%;}
 
 }
 
@@ -64,15 +64,15 @@ article input{
 
 #nombre{
     width: 70%;
+    font-size: 1.5em;
     max-width: 50vh;
-    height: 10%;
     padding: 15px;
     border: 2px black solid;
     border-radius: 15px;
 }
 
 .pelea{
-    font-size: 200%;
+    font-size: 300%;
     margin: auto;
     text-align: center;
     height: 2em;
@@ -85,21 +85,49 @@ article input{
     height: 100%;
 }
 
+.combates:has(#Votar1:checked){
+    background: linear-gradient(180deg,rgba(255, 217, 0, 0) 0%, gold 5%, rgba(255, 217, 0, 0) 50%);
+    }
 
+    .combates:has(#Votar2:checked){
+    background: linear-gradient(-180deg,rgba(255, 217, 0, 0) 50%, gold 95%, rgba(255, 217, 0, 0) 100%);
+    }
+
+    .combates:has(#Votar3:checked){
+    background: linear-gradient(180deg,rgba(255, 217, 0, 0) 0%, gold 5%, rgba(255, 217, 0, 0) 50%);
+    }
+
+    .combates:has(#Votar4:checked){
+    background: linear-gradient(-180deg,rgba(255, 217, 0, 0) 50%, gold 95%, rgba(255, 217, 0, 0) 100%);
+    }
+
+    .combates:has(#Votar5:checked){
+    background: linear-gradient(180deg,rgba(255, 217, 0, 0) 0%, gold 5%, rgba(255, 217, 0, 0) 50%);
+    }
+
+    .combates:has(#Votar6:checked){
+    background: linear-gradient(-180deg,rgba(255, 217, 0, 0) 50%, gold 95%, rgba(255, 217, 0, 0) 100%);
+    }
+
+    .combates:has(#Votar7:checked){
+    background: linear-gradient(180deg,rgba(255, 217, 0, 0) 0%, gold 5%, rgba(255, 217, 0, 0) 50%);
+    }
+
+    .combates:has(#Votar8:checked){
+    background: linear-gradient(-180deg,rgba(255, 217, 0, 0) 50%, gold 95%, rgba(255, 217, 0, 0) 100%);
+    }
 
 .combates div{
     margin: auto;
     text-align: center;
     margin-bottom: 10%;
+    font-size: 2em;
+    font-weight: bold;
 }
 
 .combates img{
     width: 70%;
     border-radius: 10%;
-}
-
-.combates p{
-    font-weight: bold;
 }
 
 .votar label{
@@ -113,7 +141,9 @@ article input{
 .votar input:checked + label{
     color: white;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.2em;
+    background: none;
+    background-color: black;
 }
 
 .votar input{
@@ -149,6 +179,12 @@ div{
         display: flex;
         flex-direction: row;
     }
+
+    @keyframes movimiento{
+
+    from{translate: 0 1%;}
+    to{translate: 0 -1%;}
+}
 
     .combates img{
     width: 50%;
