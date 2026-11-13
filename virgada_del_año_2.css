@@ -34,15 +34,19 @@ h1{
 
 }
 
+@keyframes movimiento{
+
+    from{translate: 0 1%;}
+    to{translate: 0 -1%;}
+
+}
+
 #logo{
     width: 50%;
     display: block;
     margin: auto;
     position: relative;
-    animation-fill-mode: both;
-    animation-name: entrada;
-    animation-duration: 2s;
-    animation-delay: 0.5s;
+    animation: movimiento 1.5s 2s infinite ease-in-out alternate both, entrada 2s 0.5s both;
 }
 
 article{
@@ -81,6 +85,8 @@ article input{
     height: 100%;
 }
 
+
+
 .combates div{
     margin: auto;
     text-align: center;
@@ -96,12 +102,22 @@ article input{
     font-weight: bold;
 }
 
-.votar{
+.votar label{
     padding: 3%;
     display: inline-block;
     background: linear-gradient(45deg, rgb(252, 228, 13), rgb(212, 163, 0));
     border-radius: 20%;
     color: black;
+}
+
+.votar input:checked + label{
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.votar input{
+    display: none;
 }
 
 footer{
@@ -138,6 +154,38 @@ div{
     width: 50%;
     }
 
+    .combates:has(#Votar1:checked){
+    background: linear-gradient(90deg,rgba(255, 217, 0, 0) 0%, gold 5%, rgba(255, 217, 0, 0) 50%);
+    }
+
+    .combates:has(#Votar2:checked){
+    background: linear-gradient(90deg,rgba(255, 217, 0, 0) 50%, gold 95%, rgba(255, 217, 0, 0) 100%);
+    }
+
+    .combates:has(#Votar3:checked){
+    background: linear-gradient(90deg,rgba(255, 217, 0, 0) 0%, gold 5%, rgba(255, 217, 0, 0) 50%);
+    }
+
+    .combates:has(#Votar4:checked){
+    background: linear-gradient(90deg,rgba(255, 217, 0, 0) 50%, gold 95%, rgba(255, 217, 0, 0) 100%);
+    }
+
+    .combates:has(#Votar5:checked){
+    background: linear-gradient(90deg,rgba(255, 217, 0, 0) 0%, gold 5%, rgba(255, 217, 0, 0) 50%);
+    }
+
+    .combates:has(#Votar6:checked){
+    background: linear-gradient(90deg,rgba(255, 217, 0, 0) 50%, gold 95%, rgba(255, 217, 0, 0) 100%);
+    }
+
+    .combates:has(#Votar7:checked){
+    background: linear-gradient(90deg,rgba(255, 217, 0, 0) 0%, gold 5%, rgba(255, 217, 0, 0) 50%);
+    }
+
+    .combates:has(#Votar8:checked){
+    background: linear-gradient(90deg,rgba(255, 217, 0, 0) 50%, gold 95%, rgba(255, 217, 0, 0) 100%);
+    }
+
     .pelea{
     font-size: 400%;
     }
@@ -150,7 +198,24 @@ div{
         font-size: 1em;
     }
 
+    .votar label:hover{
+        color: white;
+        background: none;
+        background: black;
+    }
+
     footer{
         font-size: 2em;
+    }
+
+    footer input:hover{
+        background-color: black;
+        border: red solid ;
+    }
+
+    .votar input:checked + label{
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
     }
 }
